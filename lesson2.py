@@ -71,32 +71,32 @@
 #     sys,exit(app.exec())
 
 #4
-import sys
-from PyQt6.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QVBoxLayout
-
-class MainWindow(QWidget):
-    def __init__(self):
-        super().__init__()
-        self.init_ui()
-
-    def init_ui(self):
-        self.setWindowTitle("Работа с Layout")
-        self.setGeometry(200, 200 , 300 , 150)
-
-        self.label = QLabel("Пример с Layout" ,self)
-        self.button = QPushButton("Изменить текст", self)
-        self.button.clicked.connect(self.change_label)
-
-        layout = QVBoxLayout()
-        layout.addWidget(self.label)
-        layout.addWidget(self.button)
-        self.setLayout(layout)
-
-    def change_label(self):
-        self.label.setText("Текст изменен!")
-
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    window = MainWindow()
-    window.show()
-    sys,exit(app.exec())
+# import sys
+# from PyQt6.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QVBoxLayout
+#
+# class MainWindow(QWidget):
+#     def __init__(self):
+#         super().__init__()
+#         self.init_ui()
+#
+#     def init_ui(self):
+#         self.setWindowTitle("Работа с Layout")
+#         self.setGeometry(200, 200 , 300 , 150)
+#
+#         self.label = QLabel("Пример с Layout" ,self)
+#         self.button = QPushButton("Изменить текст", self)
+#         self.button.clicked.connect(self.change_label)
+#
+#         layout = QVBoxLayout()
+#         layout.addWidget(self.label)
+#         layout.addWidget(self.button)
+#         self.setLayout(layout)
+#
+#     def change_label(self):
+#         self.label.setText("Текст изменен!")
+#
+# if __name__ == '__main__':
+#     app = QApplication(sys.argv)
+#     window = MainWindow()
+#     window.show()
+#     sys,exit(app.exec())
